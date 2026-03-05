@@ -2,7 +2,7 @@
 # Telco Customer Churn Prediction
 Predictive Modelling for Retention Strategy
 
-Author: Reynold Takura Choruma, Blanca Fernandez & Marisa Oliveira
+Authors: Reynold Takura Choruma, Blanca Fernandez & Marisa Oliveira
 Project Type: Individual – Data Analytics / Machine Learning  
 Year: 2026
 
