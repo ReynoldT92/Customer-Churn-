@@ -97,7 +97,7 @@ LogReg (SMOTE): better balance, higher MCC and PR‑AUC; sharp drop in false pos
 
 Random Forest / XGBoost: strongest ROC/PR‑AUC, but with more complexity and less interpretability.
 
-Final Model Selection – Logistic Regression + SMOTE
+# Final Model Selection – Logistic Regression + SMOTE
 Although XGBoost achieved the highest PR‑AUC (~0.665), the final recommended model is Logistic Regression with SMOTE because:
 
 It delivers strong, balanced performance across Precision (0.61), Recall (0.69), F1 (0.65), PR‑AUC (~0.652), and MCC (~0.51).
@@ -107,6 +107,28 @@ Coefficients are interpretable, enabling a direct link between features and chur
 Behaviour is stable, simple to retrain, and straightforward to deploy as an initial production model (standard scaler + logistic regression).
 
 XGBoost is retained as a secondary, higher‑complexity model for future iterations if the business prioritises maximum PR‑AUC and can accept more complexity.
+---
+
+## Recommendations
+
+Based on the modelling results and churn patterns:
+
+1. **Contract strategy**
+   - Prioritise moving high‑risk month‑to‑month customers onto 1–2 year contracts via targeted incentives (discounted bundles, loyalty rewards, auto‑renew offers).
+   - Use churn scores to focus these offers on customers in the top risk deciles.
+
+2. **Pricing & offer design**
+   - Monitor high‑charge customers (e.g. fibre‑optic with high monthly charges) for early signs of churn.
+   - Test targeted plan optimisation or limited, data‑driven discounts for high‑risk, high‑margin segments instead of broad price cuts.
+
+3. **Early‑tenure engagement**
+   - Treat the first 0–12 months as a **critical risk window**.
+   - Trigger proactive outreach (welcome calls/emails, usage tips, service check‑ins) for new customers flagged by the churn model.
+
+4. **Retention operations**
+   - Use the Logistic Regression + SMOTE model as the primary scoring engine.
+   - Set an operating threshold that balances recall and false positives, aligned with team capacity (e.g. target top X% highest‑risk customers per cycle).
+
 
 Key Business Insights
 1️⃣ Contract Risk
