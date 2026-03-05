@@ -42,11 +42,11 @@ The model allows the business to move from reactive churn management to proactiv
 
 
 
-### Technical Approach
+## Technical Approach
 
-### Data Preparation
+#### Data Preparation
 
-### Data Cleaning
+#### Data Cleaning
 
  The project uses the Telco Customer Churn dataset.
 	•	11 missing values in the TotalCharges field were validated and corrected using tenure consistency checks.
