@@ -100,11 +100,12 @@ Model Comparison
 
 Model performance summary:
 
-Model	Precision	Recall	F1	MCC	ROC-AUC	PR-AUC
-Logistic Regression (Vanilla)	0.49	0.82	0.61	~0.40	~0.79	~0.57
-Logistic Regression (SMOTE)	0.61	0.69	0.65	0.51	0.80	0.652
-Random Forest (Tuned)	0.68	0.51	0.58	0.47	0.845	0.660
-XGBoost (Tuned)	0.51	0.79	0.62	0.46	0.846	0.665
+| Model                         | Precision | Recall | F1   | MCC   | ROC‑AUC | PR‑AUC |
+| ----------------------------- | --------- | ------ | ---- | ----- | ------- | ------ |
+| Logistic Regression (Vanilla) | 0.49      | 0.82   | 0.61 | ~0.40 | ~0.79   | ~0.57  |
+| Logistic Regression (SMOTE)   | 0.61      | 0.69   | 0.65 | 0.51  | 0.80    | 0.652  |
+| Random Forest (tuned)         | 0.68      | 0.51   | 0.58 | 0.47  | 0.845   | 0.660  |
+| XGBoost (tuned)               | 0.51      | 0.79   | 0.62 | 0.46  | 0.846   | 0.665  |
 
 Key observations:
 	•	Vanilla Logistic Regression captures most churners but generates too many false alerts.
@@ -158,10 +159,12 @@ Strengthen onboarding and early-lifecycle engagement strategies, including proac
 Operational Impact
 
 Metric	Baseline Model	Final Model
-False Positives	315	168
-Precision	0.49	0.61
-Recall	0.82	0.69
-MCC	~0.40	0.51
+| Metric          | Baseline Model (Vanilla LogReg) | Final Model (LogReg + SMOTE) |
+| --------------- | ------------------------------- | ---------------------------- |
+| False Positives | 315                             | 168                          |
+| Precision       | 0.49                            | 0.61                         |
+| Recall          | 0.82                            | 0.69                         |
+| MCC             | ~0.40                           | 0.51                         |
 
 The final model reduces 147 false alerts per scoring cycle while still identifying the majority of churn-risk customers.
 
